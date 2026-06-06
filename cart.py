@@ -13,7 +13,7 @@ class shopping_cart:
             if choice==1:
                 self.add_item()
             elif choice==2:
-                pass
+                self.remove_item()
             elif choice==3:
                 pass
             else:
@@ -25,6 +25,17 @@ class shopping_cart:
         detail=(item,price)
         self.items.append(detail)
         print(self.items)
+
+    def remove_item(self):
+        name=input("enter name of product to remove=")
+        for i in self.items:
+            if i[0]==name:
+                self.items.remove(i)
+                print("product remove",i)
+                print("after deletion your product list",self.items)
+            else:
+                print("no items found")
+
 
 
 s1=shopping_cart()
