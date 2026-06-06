@@ -15,7 +15,7 @@ class shopping_cart:
             elif choice==2:
                 self.remove_item()
             elif choice==3:
-                pass
+                self.total_bill()
             else:
                 exit()
                 break
@@ -35,7 +35,15 @@ class shopping_cart:
                 print("after deletion your product list",self.items)
             else:
                 print("no items found")
+    def total_bill(self):
+        total=0
+        for i in self.items:
+            total+=i[1]
+            print("your total bill=",total)
+        print('your cart is empty')
 
+    
+            
 
 
 s1=shopping_cart()
